@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+  color: orangered;
+  font-family: 'Exo 2', sans-serif;
+  background-image: url("templatemo_slide_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+form {
+  position: relative;
+  width: 28%;
+  margin: 25px auto;
+  border: solid orange 3px;
+  border-radius: 10px;
+  padding: 25px;
+  background-image: url("basic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 3;
+}
+
+form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -6;
+}
+
+.form_class {
+  width: 80%;
+  margin: 10px auto;
+  padding: 6px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.input_clicked_1 {
+  background-image: url("1.jpg");
+}
+
+.input_clicked_2 {
+  background-image: url("2.jpg");
+}
+
+.input_clicked_3 {
+  background-image: url("3.jpg");
+}
+
+.input_clicked_4 {
+  background-image: url("4.jpg");
+}
+
+input:first-child,
+input:nth-child(2),
+input:nth-child(3),
+input:nth-child(4) {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+}
+
+input[type="date"] {
+  width: 42%;
+}
+
+.form_class:nth-child(6) input,
+.form_class:nth-child(7) input {
+  width: 15%;
+  height: 15px;
+}
+
+button {
+  display: block;
+  width: 55%;
+  margin: 30px auto;
+  padding: 15px 20px;
+  text-align: center;
+  background-color: #22ea06;
+  color: #ea04f1;
+  border: solid #333 1px;
+  border-radius: 12px;
+  font-size: 18px;
+  transition-property: all;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  transition-timing-function: bezier(0.42, 0, 1, 1);
+}
+
+button:hover {
+  background-color: salmon;
+  color: olivedrab;
+}
+
+@media(max-width: 480px) {
+  form {
+    width: 80%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 481px) and (max-width: 760px) {
+  form {
+    width: 50%;
+  }
+}

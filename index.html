@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="/action.php">
+    <div class="form_class">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname">
+    </div>
+    <div class="form_class">
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname">
+    </div>
+    <div class="form_class">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div class="form_class">
+      <label for="pwrd">Password:</label>
+      <input type="password" id="pwrd" name="pwrd">
+    </div>
+    <div class="form_class">
+      <label for="birthdate">Birth Date</label>
+      <input type="date" id="birthdate" name="birthdate">
+    </div>
+    <div class="form_class">
+      <label for="sex">Sex:</label>
+      <input type="radio" id="sex" name="sex" value="male" checked>Male
+      <input type="radio" id="sex" name="sex" value="female">Female
+      <input type="radio" id="sex" name="sex" value="other">Other
+    </div>
+    <div class="form_class">
+      <label for="origin">State of Origin:</label>
+      <input type="checkbox" id="origin name=" origin" value="lagos">Lagos
+      <input type="checkbox" id="origin name=" origin" value="other" checked>Other
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    let inputs = document.querySelectorAll('input'),
+      formEl = document.querySelector('form');
+    // console.log(inputs.length);
+    function eventDisp(event) {
+      console.log(event);
+      console.log(event.target.value.length);
+    }
+
+    function changeBackground(i) {
+      formEl.classList.add("input_clicked_" + (i + 1));
+    }
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('click', eventDisp, false);
+      if (i < 4) {
+        inputs[i].addEventListener('click', function () {
+          // changeBackground(i);
+          setTimeout(changeBackground, 3000, i);
+        }, false);
+      }
+    }
+  </script>
+</body>
+
+</html>
